@@ -3,7 +3,6 @@
 .Rhistory
 .RData
 .Rprofile
-.renv
 # knitr caches and files.
 *_cache/
 # OSX Stuff
@@ -14,4 +13,3 @@
 # R markdown stuff
 *.log
 old_ex
-
