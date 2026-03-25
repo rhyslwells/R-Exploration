@@ -89,6 +89,12 @@ plot(squid$DML, squid$weight,
      ylab = "Weight",
      pch = 16)
 
+plot(squid$DML, squid$eviscerate.weight,
+     main = "Squid DML vs Weight",
+     xlab = "Dorsal Mantle Length (DML)",
+     ylab = "Weight",
+     pch = 16)
+
 # Add a linear regression line to the scatter plot
 abline(lm(squid$weight ~ squid$DML), col = "red")
 
@@ -117,6 +123,8 @@ heatmap(correlation_matrix, main = "Correlation Heatmap of Squid Measurements")
 # Simple linear regression: weight as a function of DML
 lm_model <- lm(weight ~ DML, data = squid)
 summary(lm_model)
+
+# Add a plot here
 
 # Multiple linear regression: weight predicted by DML, ovary.weight, and maturity.stage
 lm_multiple <- lm(weight ~ DML + ovary.weight + as.factor(maturity.stage), data = squid)
